@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Average Joe's MBA — Your All-In-One Actionable Roadmap</title>
+<meta name="description" content="Practical, no-nonsense small business strategies. An MBA's worth of real-world knowledge — without the jargon or the debt. Courses, live events, and an actionable roadmap to grow with confidence.">
+<meta name="theme-color" content="#FBC23C">
+<meta property="og:title" content="The Average Joe's MBA">
+<meta property="og:description" content="Your All-In-One Actionable Roadmap for small business success.">
+<meta property="og:image" content="https://img1.wsimg.com/isteam/ip/067468e7-4f26-4f9c-a5d7-6aa2adc626f7/IMG_0473%202_websize.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#FBC23C;
+    --gold-deep:#E5A50A;
+    --ink:#15171C;
+    --ink-soft:#2A2E37;
+    --paper:#FFFFFF;
+    --cloud:#F6F7F9;
+    --muted:#5B6270;
+    --line:#E6E8EC;
+    --radius:18px;
+    --shadow:0 10px 40px rgba(20,23,28,.10);
+    --shadow-sm:0 4px 18px rgba(20,23,28,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.display{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1180px,92%);margin-inline:auto}
+  .eyebrow{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--gold-deep)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;padding:.95rem 1.6rem;border-radius:999px;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s ease}
+  .btn-primary{background:var(--gold);color:var(--ink);box-shadow:0 8px 22px rgba(251,194,60,.45)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(251,194,60,.55)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .btn-light{background:#fff;color:var(--ink)}
+  .btn-light:hover{transform:translateY(-2px)}
+  .btn-sm{padding:.6rem 1.1rem;font-size:.92rem}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.12rem}
+  .brand .mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));display:grid;place-items:center;color:var(--ink);font-weight:800;font-size:1.1rem;box-shadow:var(--shadow-sm)}
+  .navlinks{display:flex;align-items:center;gap:2rem;font-weight:500}
+  .navlinks a:not(.btn){color:var(--ink-soft);font-size:.97rem}
+  .navlinks a:not(.btn):hover{color:var(--gold-deep)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+
+  /* Hero */
+  .hero{position:relative;padding:clamp(3rem,7vw,5.5rem) 0 clamp(3rem,6vw,4.5rem);background:radial-gradient(1200px 500px at 80% -10%,rgba(251,194,60,.22),transparent 60%),var(--cloud)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:800}
+  .hero h1 .hl{background:linear-gradient(180deg,transparent 62%,rgba(251,194,60,.55) 62%)}
+  .hero p.lead{font-size:1.18rem;color:var(--muted);margin:1.4rem 0 2rem;max-width:34ch}
+  .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:1.8rem;margin-top:2.4rem;flex-wrap:wrap}
+  .hero-meta .stat .n{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.6rem}
+  .hero-meta .stat .l{font-size:.85rem;color:var(--muted)}
+  .hero-img{position:relative}
+  .hero-img img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
+  .hero-badge{position:absolute;bottom:-18px;left:-18px;background:#fff;border-radius:14px;padding:.85rem 1.1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;font-weight:600;font-size:.92rem}
+  .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+
+  /* Trust strip */
+  .trust{padding:1.6rem 0;border-bottom:1px solid var(--line)}
+  .trust .wrap{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;justify-content:center}
+  .trust span{color:var(--muted);font-weight:600;font-size:.92rem}
+  .trust .logos{display:flex;gap:2.2rem;flex-wrap:wrap;align-items:center;opacity:.85}
+  .trust .logos b{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:var(--ink-soft)}
+
+  /* Sections */
+  section{padding:clamp(3.2rem,6vw,5.5rem) 0}
+  .section-head{max-width:660px;margin-bottom:2.6rem}
+  .section-head.center{margin-inline:auto;text-align:center}
+  .section-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;margin:.6rem 0 .8rem}
+  .section-head p{color:var(--muted);font-size:1.08rem}
+
+  /* Value blurb */
+  .blurb{background:var(--ink);color:#fff;border-radius:var(--radius)}
+  .blurb .wrap{padding:clamp(2.2rem,4vw,3.4rem)}
+  .blurb h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;max-width:20ch}
+  .blurb p{color:#C7CCD6;font-size:1.08rem;margin-top:1.1rem;max-width:62ch}
+  .blurb .btn{margin-top:1.8rem}
+
+  /* For you cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.7rem;box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card .ic{width:46px;height:46px;border-radius:12px;background:rgba(251,194,60,.18);display:grid;place-items:center;font-size:1.3rem;margin-bottom:1rem}
+  .card h4{font-size:1.08rem;font-weight:700;margin-bottom:.35rem}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  /* Living Library highlight */
+  .library{background:linear-gradient(135deg,var(--gold),var(--gold-deep));border-radius:var(--radius);color:var(--ink)}
+  .library .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center;padding:clamp(2.2rem,4vw,3.2rem)}
+  .library h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:800}
+  .library p{margin-top:1rem;font-size:1.08rem;max-width:48ch;color:#3a2f06}
+  .library .cta-col{display:flex;flex-direction:column;gap:.9rem;align-items:flex-start}
+  .library .cta-col .btn{width:100%;justify-content:center}
+
+  /* Events */
+  .events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .event{display:flex;gap:1.2rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease}
+  .event:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .event .date{flex:0 0 76px;text-align:center;background:var(--ink);color:#fff;border-radius:12px;padding:.7rem .4rem;align-self:flex-start}
+  .event .date .m{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .event .date .d{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.5rem;line-height:1}
+  .event .date .y{font-size:.72rem;color:#9aa1ad}
+  .event .body h4{font-size:1.08rem;font-weight:700}
+  .event .body .meta{color:var(--muted);font-size:.9rem;margin:.35rem 0 .8rem;display:flex;flex-direction:column;gap:.15rem}
+  .event .body .meta span{display:flex;align-items:center;gap:.4rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:999px;background:rgba(251,194,60,.2);color:var(--gold-deep);margin-bottom:.5rem}
+
+  /* Why attend / video */
+  .why{background:var(--cloud)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+  .video{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9;background:#000}
+  .video iframe{width:100%;height:100%;border:0}
+  .check-list{list-style:none;margin-top:1.4rem;display:flex;flex-direction:column;gap:.85rem}
+  .check-list li{display:flex;gap:.7rem;align-items:flex-start;font-size:1.02rem}
+  .check-list .ck{flex:0 0 24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:.85rem;margin-top:.15rem}
+
+  /* CTA band */
+  .cta-band{background:var(--ink);color:#fff;text-align:center}
+  .cta-band h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;max-width:18ch;margin-inline:auto}
+  .cta-band p{color:#C7CCD6;font-size:1.1rem;margin:1.1rem auto 2rem;max-width:50ch}
+  .cta-band .hero-cta{justify-content:center}
+
+  /* Footer */
+  footer{background:#0F1115;color:#aeb4c0;padding:3.2rem 0 2rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem;padding-bottom:2.2rem;border-bottom:1px solid #232730}
+  footer .brand{color:#fff;margin-bottom:.9rem}
+  footer p{font-size:.95rem;max-width:34ch}
+  footer h5{color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.9rem}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+  footer ul a{font-size:.94rem}
+  footer ul a:hover{color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.6rem;font-size:.88rem;color:#7c828f}
+
+  @media(max-width:880px){
+    .hero-grid,.library .wrap,.why-grid,.foot-grid{grid-template-columns:1fr}
+    .cards,.events-grid{grid-template-columns:1fr}
+    .navlinks{display:none}
+    .menu-btn{display:block}
+    .hero-img{order:-1}
+    .library .cta-col{flex-direction:row;flex-wrap:wrap}
+    .library .cta-col .btn{width:auto;flex:1}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mark">JM</span> The Average Joe's MBA</a>
+    <nav class="navlinks">
+      <a href="#about">About</a>
+      <a href="#library">Living Library</a>
+      <a href="#events">Live Events</a>
+      <a href="#contact">Contact</a>
+      <a href="https://averagejoemba.com/apply" class="btn btn-primary btn-sm">Apply Now</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Your All-In-One Actionable Roadmap</span>
+        <h1>This is your <span class="hl">blueprint</span> for business success.</h1>
+        <p class="lead">An MBA's worth of practical, real-world knowledge — without the jargon or the debt.</p>
+        <div class="hero-cta">
+          <a href="https://averagejoemba.com/apply" class="btn btn-primary">Apply Now →</a>
+          <a href="#library" class="btn btn-ghost">Explore the Courses</a>
+        </div>
+        <div class="hero-meta">
+          <div class="stat"><div class="n">100%</div><div class="l">Actionable, no fluff</div></div>
+          <div class="stat"><div class="n">Live</div><div class="l">In-person events</div></div>
+          <div class="stat"><div class="n">$0</div><div class="l">Smart, free strategies</div></div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://img1.wsimg.com/isteam/ip/067468e7-4f26-4f9c-a5d7-6aa2adc626f7/IMG_0473%202_websize.jpg/:/rs=w:900" alt="Chris and Brandon presenting The Secret Sauce live.">
+        <div class="hero-badge"><span class="dot"></span> The evolution of The Secret Sauce</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <span>Trusted &amp; built with:</span>
+      <div class="logos">
+        <b>SparkStudio HQ</b><b>KH Media</b><b>Team CIA</b><b>Techtrix</b>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT / BLURB -->
+  <section id="about">
+    <div class="blurb">
+      <div class="wrap">
+        <span class="eyebrow" style="color:var(--gold)">The blueprint</span>
+        <h2>Forget the shelf of confusing books and pricey courses.</h2>
+        <p>The Average Joe's MBA is a practical, experience-backed guide that demystifies the critical parts of starting and running a small business. We've distilled essential business knowledge, combined it with lessons from our own startup journeys, and layered in powerful free strategies — so you can build smarter, attract clients organically, manage your finances wisely, and grow with confidence.</p>
+        <a href="#library" class="btn btn-primary">See what's inside →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR YOU -->
+  <section style="padding-top:1rem">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Is this for you?</span>
+        <h2>The Average Joe's MBA is perfect for you if…</h2>
+        <p>If any of these sound like you, you're exactly who we built this for.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ic">🚀</div><h4>You're just getting started</h4><p>A new or aspiring small business owner who wants comprehensive, step-by-step guidance.</p></div>
+        <div class="card"><div class="ic">🎓</div><h4>You want the knowledge, not the debt</h4><p>An MBA's worth of practical know-how — without the jargon, the price tag, or the fluff.</p></div>
+        <div class="card"><div class="ic">🎯</div><h4>You're ready to take control</h4><p>Own your marketing, financials, and operations instead of guessing your way through.</p></div>
+        <div class="card"><div class="ic">🛠️</div><h4>You learn by doing</h4><p>You want real-world experience that helps you avoid common, costly mistakes.</p></div>
+        <div class="card"><div class="ic">📈</div><h4>You want to grow profitably</h4><p>Build a sustainable, profitable business using smart — often free — tools and strategies.</p></div>
+        <div class="card" style="background:var(--ink);color:#fff;border-color:var(--ink)"><div class="ic" style="background:rgba(251,194,60,.25)">✨</div><h4 style="color:#fff">Sound like you?</h4><p style="color:#C7CCD6">Then you're in the right place. <a href="https://averagejoemba.com/apply" style="color:var(--gold);font-weight:700">Apply now →</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVING LIBRARY -->
+  <section id="library" style="padding-top:1rem">
+    <div class="wrap">
+      <div class="library">
+        <div class="wrap">
+          <div>
+            <span class="eyebrow" style="color:#3a2f06">Small business strategies for success</span>
+            <h2>The Living Library of Actionable Courses</h2>
+            <p>You've seen The Secret Sauce — so you know we don't do fluff. The Living Library is built for business owners who want results, not just information. Ready to get to work?</p>
+          </div>
+          <div class="cta-col">
+            <a href="https://averagejoemba.com/signup" class="btn btn-light">Learn More →</a>
+            <a href="https://averagejoemba.com/apply" class="btn btn-ghost">Apply for Access</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Upcoming live events</span>
+        <h2>Come learn with us in person</h2>
+        <p>Straightforward, practical sessions — no complex jargon, just strategies you can use Monday morning.</p>
+      </div>
+      <div class="events-grid">
+        <div class="event">
+          <div class="date"><div class="m">Jul</div><div class="d">14</div><div class="y">2026</div></div>
+          <div class="body">
+            <span class="tag">Workshop</span>
+            <h4>The Average Joe's Introduction to AI</h4>
+            <div class="meta">
+              <span>🕙 10:00 AM – 11:30 AM</span>
+              <span>📍 SparkStudio HQ, Loomis, CA</span>
+            </div>
+            <a href="https://luma.com/h03ra4xn" class="btn btn-primary btn-sm">Register →</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="date"><div class="m">Jul</div><div class="d">23</div><div class="y">2026</div></div>
+          <div class="body">
+            <span class="tag">The Secret Sauce</span>
+            <h4>The Secret Sauce — Live</h4>
+            <div class="meta">
+              <span>🕦 11:30 AM – 1:30 PM</span>
+              <span>📍 New York Life, Elk Grove, CA</span>
+            </div>
+            <a href="https://luma.com/g86uye1u" class="btn btn-primary btn-sm">Register →</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="date"><div class="m">Sep</div><div class="d">01</div><div class="y">2026</div></div>
+          <div class="body">
+            <span class="tag">The Secret Sauce</span>
+            <h4>The Secret Sauce — Live</h4>
+            <div class="meta">
+              <span>🕙 10:00 AM – 12:00 PM</span>
+              <span>📍 Elk Grove Chamber of Commerce, CA</span>
+            </div>
+            <a href="#contact" class="btn btn-ghost btn-sm">Details</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="date"><div class="m">Aug</div><div class="d">TBD</div><div class="y">2026</div></div>
+          <div class="body">
+            <span class="tag">Host wanted</span>
+            <h4>The Secret Sauce — Venue TBD</h4>
+            <div class="meta">
+              <span>🕙 Time to be announced</span>
+              <span>📍 Looking for a host venue near you</span>
+            </div>
+            <a href="#contact" class="btn btn-ghost btn-sm">Contact to Host →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ATTEND -->
+  <section>
+    <div class="wrap why-grid">
+      <div>
+        <span class="eyebrow">Why attend a live event?</span>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:800;margin:.6rem 0 .4rem">See the strategies in action</h2>
+        <ul class="check-list">
+          <li><span class="ck">✓</span> Straightforward, practical business strategies — zero jargon.</li>
+          <li><span class="ck">✓</span> Learn directly from people who've built businesses themselves.</li>
+          <li><span class="ck">✓</span> Network with hard-working local business owners.</li>
+          <li><span class="ck">✓</span> Walk away with an action plan you can use immediately.</li>
+        </ul>
+        <a href="#events" class="btn btn-primary" style="margin-top:1.6rem">Find an event →</a>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/sbeg0P3Mrg0?rel=0&showinfo=0" title="Why attend a live event" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <h2>Ready to build smarter?</h2>
+      <p>Take the first step toward a sustainable, profitable business. Apply today or reach out — we'd love to hear from you.</p>
+      <div class="hero-cta">
+        <a href="https://averagejoemba.com/apply" class="btn btn-primary">Apply Now →</a>
+        <a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ" class="btn btn-light">Contact Us</a>
+      </div>
+      <p style="margin-top:1.6rem;font-size:.95rem">Or email us at <a href="mailto:Hello@AverageJoeMBA.com" style="color:var(--gold);font-weight:600">Hello@AverageJoeMBA.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><span class="mark">JM</span> The Average Joe's MBA</a>
+        <p>Practical small business strategies for real success — your all-in-one actionable roadmap.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="https://averagejoemba.com/livinglibrary">Living Library</a></li>
+          <li><a href="https://averagejoemba.com/apply">Apply</a></li>
+          <li><a href="#events">Live Events</a></li>
+          <li><a href="https://413qyi.share-na2.hsforms.com/2KZm4Grp1R5eAnDuRbkAAgQ">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="https://averagejoemba.com/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://averagejoemba.com/terms-of-service">Terms of Service</a></li>
+          <li><a href="https://averagejoemba.com/accessibility-statement">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 The Average Joe's MBA — All Rights Reserved.</span>
+      <span>Hello@AverageJoeMBA.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click',function(){
+    var n=document.querySelector('.navlinks');
+    n.style.display = (n.style.display==='flex')?'none':'flex';
+    n.style.flexDirection='column';n.style.position='absolute';n.style.top='62px';n.style.right='4%';
+    n.style.background='#fff';n.style.padding='1rem 1.4rem';n.style.borderRadius='14px';n.style.boxShadow='var(--shadow)';n.style.gap='1rem';
+  });
+</script>
+</body>
+</html>
